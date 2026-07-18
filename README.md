@@ -3,7 +3,9 @@
 Press- B(ON/OFF) ball movenemnt heatmap
 Press- R(ON/OFF) red team movenemnt heatmap
 Press- W(ON/OFF) white team movenemnt heatmap
->>batch_runner.py and smartmatch_pipeline.py
+
+>>Using the DETECTION folder--->
+batch_runner.py and smartmatch_pipeline.py
 are the codes finalised 
 others are used to develop from scratch
 
