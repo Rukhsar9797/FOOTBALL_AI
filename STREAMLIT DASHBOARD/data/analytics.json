@@ -1,0 +1,39 @@
+{
+  "possession": {
+    "Red Team": 31.75,
+    "White Team": 68.25
+  },
+  "top_distance_players": [
+    {
+      "player_id": 154,
+      "distance_meters": 202.87
+    },
+    {
+      "player_id": 2,
+      "distance_meters": 191.18
+    },
+    {
+      "player_id": 141,
+      "distance_meters": 185.47
+    },
+    {
+      "player_id": 1,
+      "distance_meters": 178.34
+    },
+    {
+      "player_id": 9,
+      "distance_meters": 169.41
+    }
+  ],
+  "highest_speed": {
+    "player_id": 16,
+    "speed": 0
+  },
+  "most_active_player": {
+    "player_id": 16,
+    "activity_score": 100.28
+  },
+  "momentum": {
+    "dominant_team": "White Team"
+  }
+}
