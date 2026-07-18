@@ -1,0 +1,546 @@
+/* =========================================================
+   FootballIQ Analytics Dashboard — Custom CSS
+   Dark Professional Theme
+   ========================================================= */
+
+/* ── Google Fonts ─────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Rajdhani:wght@500;600;700&display=swap');
+
+/* ── Global Reset & Base ──────────────────────────────── */
+html, body, [class*="css"] {
+    font-family: 'Inter', sans-serif !important;
+    background-color: #0A0E1A !important;
+    color: #F1F5F9 !important;
+}
+
+/* ── Hide Streamlit Chrome ────────────────────────────── */
+#MainMenu { visibility: hidden; }
+footer    { visibility: hidden; }
+header    { visibility: hidden; }
+
+/* ── Main container padding ───────────────────────────── */
+.main .block-container {
+    padding: 1.5rem 2rem 3rem 2rem !important;
+    max-width: 1400px !important;
+}
+
+/* ── Sidebar ──────────────────────────────────────────── */
+[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #0D1321 0%, #0A0E1A 100%) !important;
+    border-right: 1px solid #1E293B !important;
+    min-width: 260px !important;
+}
+
+[data-testid="stSidebar"] * {
+    color: #CBD5E1 !important;
+}
+
+[data-testid="stSidebar"] .stRadio > div {
+    gap: 4px !important;
+}
+
+[data-testid="stSidebar"] .stRadio label {
+    padding: 10px 16px !important;
+    border-radius: 10px !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    border: 1px solid transparent !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    color: #94A3B8 !important;
+    font-size: 0.9rem !important;
+}
+
+[data-testid="stSidebar"] .stRadio label:hover {
+    background: rgba(59,130,246,0.1) !important;
+    border-color: rgba(59,130,246,0.3) !important;
+    color: #F1F5F9 !important;
+}
+
+/* ── Page Header ──────────────────────────────────────── */
+.page-header {
+    padding: 1.5rem 0 1rem 0;
+    border-bottom: 1px solid #1E293B;
+    margin-bottom: 1.5rem;
+}
+
+.page-title {
+    font-family: 'Rajdhani', sans-serif !important;
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #00FF87, #3B82F6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.page-subtitle {
+    color: #64748B;
+    font-size: 0.9rem;
+    margin-top: 4px;
+}
+
+/* ── Metric Cards ─────────────────────────────────────── */
+.metric-card {
+    background: linear-gradient(135deg, #1A2332 0%, #1F2B3E 100%);
+    border: 1px solid #1E293B;
+    border-radius: 16px;
+    padding: 1.25rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.metric-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--accent, linear-gradient(90deg, #00FF87, #3B82F6));
+    border-radius: 16px 16px 0 0;
+}
+
+.metric-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+
+.metric-icon {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.metric-label {
+    color: #64748B;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+}
+
+.metric-value {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #F1F5F9;
+    line-height: 1.1;
+}
+
+.metric-delta {
+    font-size: 0.75rem;
+    color: #00FF87;
+    margin-top: 4px;
+}
+
+/* ── Glass Card ───────────────────────────────────────── */
+.glass-card {
+    background: rgba(26, 35, 50, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(30, 41, 59, 0.9);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* ── Section Title ────────────────────────────────────── */
+.section-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #CBD5E1;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, #1E293B, transparent);
+    margin-left: 8px;
+}
+
+/* ── Team Badge ───────────────────────────────────────── */
+.team-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.team-2 { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.4); color: #FFFFFF; }
+.team-1  { background: rgba(239,68,68,0.15);  border: 1px solid rgba(239,68,68,0.4);  color: #F87171; }
+
+/* ── Progress Bar ─────────────────────────────────────── */
+.progress-bar-container {
+    background: #1E293B;
+    border-radius: 999px;
+    height: 8px;
+    overflow: hidden;
+    margin: 6px 0;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #3B82F6, #00FF87);
+    transition: width 0.6s ease;
+}
+
+/* ── Possession Bar ───────────────────────────────────── */
+.possession-bar {
+    display: flex;
+    height: 16px;
+    border-radius: 999px;
+    overflow: hidden;
+    margin: 8px 0;
+}
+
+.poss-2 {
+    background: linear-gradient(90deg, #CCCCCC, #FFFFFF);
+/*
+    background: linear-gradient(90deg, #1D4ED8, #3B82F6); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: white;
+    transition: width 0.8s ease;
+}
+
+.poss-1 {
+    background: linear-gradient(90deg, #EF4444, #DC2626);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: white;
+    transition: width 0.8s ease;
+}
+
+/* ── Player Card ──────────────────────────────────────── */
+.player-card {
+    background: linear-gradient(135deg, #1A2332 0%, #1F2B3E 100%);
+    border: 1px solid #1E293B;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.player-card:hover {
+    border-color: #3B82F6;
+    background: linear-gradient(135deg, #1F2B3E 0%, #243447 100%);
+    transform: translateX(4px);
+}
+
+/* ── Insight Card ─────────────────────────────────────── */
+.insight-card {
+    background: linear-gradient(135deg, #1A2332 0%, #111827 100%);
+    border-left: 4px solid #00FF87;
+    border-radius: 0 12px 12px 0;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.insight-card.warning { border-left-color: #F59E0B; }
+.insight-card.danger  { border-left-color: #EF4444; }
+.insight-card.info    { border-left-color: #3B82F6; }
+
+/* ── Warning / Error Cards ────────────────────────────── */
+.warning-card {
+    background: rgba(245,158,11,0.1);
+    border: 1px solid rgba(245,158,11,0.3);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 1rem 0;
+    color: #FCD34D;
+}
+
+.warning-icon { font-size: 1.5rem; flex-shrink: 0; }
+
+/* ── Stat Row ─────────────────────────────────────────── */
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(30,41,59,0.7);
+}
+
+.stat-row:last-child { border-bottom: none; }
+
+.stat-key   { color: #64748B; font-size: 0.85rem; }
+.stat-value { font-weight: 600; color: #E2E8F0; font-size: 0.9rem; }
+
+/* ── Video Container ──────────────────────────────────── */
+.video-wrapper {
+    background: #0D1321;
+    border: 1px solid #1E293B;
+    border-radius: 16px;
+    overflow: hidden;
+    padding: 4px;
+}
+
+.video-wrapper video {
+    width: 100% !important;
+    border-radius: 12px;
+}
+
+/* ── Download Button ──────────────────────────────────── */
+.stDownloadButton > button {
+    background: linear-gradient(135deg, #1A2332, #1F2B3E) !important;
+    border: 1px solid #334155 !important;
+    color: #F1F5F9 !important;
+    border-radius: 12px !important;
+    padding: 0.75rem 1.5rem !important;
+    font-weight: 600 !important;
+    transition: all 0.2s ease !important;
+    width: 100% !important;
+}
+
+.stDownloadButton > button:hover {
+    border-color: #3B82F6 !important;
+    box-shadow: 0 0 20px rgba(59,130,246,0.2) !important;
+}
+
+/* ── Streamlit Native Overrides ───────────────────────── */
+[data-testid="metric-container"] {
+    background: linear-gradient(135deg, #1A2332, #1F2B3E) !important;
+    border: 1px solid #1E293B !important;
+    border-radius: 12px !important;
+    padding: 1rem !important;
+}
+
+[data-testid="stMetricValue"] {
+    font-family: 'Rajdhani', sans-serif !important;
+    font-size: 1.8rem !important;
+    font-weight: 700 !important;
+    color: #F1F5F9 !important;
+}
+
+[data-testid="stMetricLabel"] {
+    color: #64748B !important;
+    font-size: 0.75rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+}
+
+.stTabs [data-baseweb="tab-list"] {
+    background: #111827 !important;
+    border-radius: 12px !important;
+    padding: 4px !important;
+    gap: 4px !important;
+    border: 1px solid #1E293B !important;
+}
+
+.stTabs [data-baseweb="tab"] {
+    background: transparent !important;
+    color: #64748B !important;
+    border-radius: 8px !important;
+    border: none !important;
+    font-weight: 500 !important;
+    transition: all 0.2s ease !important;
+}
+
+.stTabs [aria-selected="true"] {
+    background: linear-gradient(135deg, #1D4ED8, #3B82F6) !important;
+    color: white !important;
+}
+
+/* ── Dataframe Styling ────────────────────────────────── */
+.stDataFrame {
+    background: #111827 !important;
+    border-radius: 12px !important;
+    border: 1px solid #1E293B !important;
+    overflow: hidden;
+}
+
+/* ── Scrollbar ────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #0A0E1A; }
+::-webkit-scrollbar-thumb { background: #1E293B; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #334155; }
+
+/* ── Selectbox / Input overrides ──────────────────────── */
+.stSelectbox > div[data-baseweb="select"] > div {
+    background: #1A2332 !important;
+    border-color: #1E293B !important;
+    color: #F1F5F9 !important;
+    border-radius: 10px !important;
+}
+
+.stTextInput > div > div > input {
+    background: #1A2332 !important;
+    border-color: #1E293B !important;
+    color: #F1F5F9 !important;
+    border-radius: 10px !important;
+}
+
+/* ── Expander ─────────────────────────────────────────── */
+.streamlit-expanderHeader {
+    background: #1A2332 !important;
+    border-radius: 10px !important;
+    border: 1px solid #1E293B !important;
+    color: #CBD5E1 !important;
+}
+
+/* ── Divider ──────────────────────────────────────────── */
+hr {
+    border: none;
+    border-top: 1px solid #1E293B !important;
+    margin: 1.5rem 0;
+}
+
+/* ── Logo header bar ──────────────────────────────────── */
+.logo-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 1rem 0;
+    border-bottom: 1px solid #1E293B;
+    margin-bottom: 1.5rem;
+}
+
+.logo-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #00FF87, #3B82F6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo-version {
+    background: rgba(59,130,246,0.2);
+    color: #60A5FA;
+    font-size: 0.6rem;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid rgba(59,130,246,0.3);
+}
+
+/* ── Hero Banner ──────────────────────────────────────── */
+.hero-banner {
+    background: linear-gradient(135deg, #0D1321 0%, #1A2332 50%, #0D1321 100%);
+    border: 1px solid #1E293B;
+    border-radius: 20px;
+    padding: 3rem 2.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(ellipse at center, rgba(0,255,135,0.06) 0%, transparent 70%);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.05); opacity: 1; }
+}
+
+.hero-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #00FF87 0%, #3B82F6 50%, #8B5CF6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.hero-subtitle {
+    color: #64748B;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.hackathon-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(135deg, rgba(0,255,135,0.1), rgba(59,130,246,0.1));
+    border: 1px solid rgba(0,255,135,0.3);
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-size: 0.8rem;
+    color: #00FF87;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    position: relative;
+}
+
+/* ── Pitch SVG container ──────────────────────────────── */
+.pitch-container {
+    background: #1A2332;
+    border-radius: 16px;
+    padding: 1rem;
+    border: 1px solid #1E293B;
+}
+
+/* ── Live dot ─────────────────────────────────────────── */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+.live-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #EF4444;
+    border-radius: 50%;
+    animation: blink 1.5s ease-in-out infinite;
+    margin-right: 6px;
+}
+
+.live-label {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(239,68,68,0.15);
+    border: 1px solid rgba(239,68,68,0.3);
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #F87171;
+    letter-spacing: 0.08em;
+}
+
+/* ── Slider override ──────────────────────────────────── */
+[data-testid="stSlider"] {
+    padding: 0.5rem 0 !important;
+}
